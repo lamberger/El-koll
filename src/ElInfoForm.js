@@ -13,9 +13,7 @@ export const ElInfoForm = (props) => (
             placeholder="Ditt el-pris t ex 0,98..." 
             className="form-control input-lg" 
             type="number"
-            pattern="[0-9]*"
             min="0" 
-            max="10"
             step="0.01"
             onChange={ props.handlePriceChange }
             value={ props.price }/>
@@ -30,7 +28,7 @@ export const ElInfoForm = (props) => (
             placeholder="Produktens effekt ex 40W..."
             className="form-control input-lg"
             type="number"
-            pattern="[0-9]*"
+            min="0"
             step="0.1"
             value={props.effect}
             onChange={props.handleEffectChange} />
@@ -45,7 +43,6 @@ export const ElInfoForm = (props) => (
             placeholder="Används antal timmar/dygn..."
             className="form-control input-lg"
             type="number"
-            pattern="[0-9]*"
             min="0" 
             max="24"
             step="0.5"
