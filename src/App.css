@@ -1,0 +1,23 @@
+p{
+    font-size: large;
+}
+.input-group-addon{
+    background-color: lightyellow;
+    color: saddlebrown;
+    
+}
+.btn-space {
+    margin: 1em 0 1em 0;
+}
+.btn-pjl {
+    background-color: lightyellow;
+    border: 1px solid #cccccc;
+    color: saddlebrown;
+}
+.btn-pjl:hover{
+    color: sandybrown;
+}
+.panel-default > .panel-heading {
+    background-color: lightyellow;
+    color: saddlebrown;
+}
