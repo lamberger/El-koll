@@ -5,22 +5,7 @@ export const ElInfoForm = (props) => (
   
   <form onSubmit={ props.handleSubmit }>
     <div className="input-group">
-        <span className="input-group-addon">
-            <strong>kr</strong>
-        </span>
-        <input 
-            name="price" 
-            placeholder="Ditt el-pris t ex 0,98..." 
-            className="form-control input-lg" 
-            type="number"
-            min="0" 
-            step="0.01"
-            onChange={ props.handlePriceChange }
-            value={ props.price }/>
-    </div>
-    <br />
-    <div className="input-group">
-        <span className="input-group-addon">
+        <span className="input-group-addon">Watt&nbsp;
             <span className="glyphicon glyphicon-lamp" aria-hidden="true"></span>
         </span>
         <input
@@ -30,29 +15,39 @@ export const ElInfoForm = (props) => (
             type="number"
             min="0"
             step="0.1"
+            max="5000"
             value={props.effect}
             onChange={props.handleEffectChange} />
+            <output htmlFor="effect">{ props.effect } watt</output>
     </div>
-    <br />
+    <p><br /><br /></p>
     <div className="input-group">
-        <span className="input-group-addon">
-            <span className="glyphicon glyphicon-time" aria-hidden="true"></span>
-        </span>
         <input
             name="numberOfHours"
-            placeholder="Används antal timmar/dygn..."
-            className="form-control input-lg"
-            type="number"
+            type="range"
             min="0" 
             max="24"
             step="0.5"
             value={props.numberOfHours}
             onChange={props.handleHourChange} />
+            <output htmlFor="numberOfHours">{ props.numberOfHours } Tim</output>
+    </div>
+    <p><br /><br /></p>
+    <div className="input-group">
+        <input 
+            name="price"  
+            type="range"
+            min="0" 
+            step="0.1"
+            max="50"
+            value={props.price}
+            onChange={ props.handlePriceChange }/>
+            <output htmlFor="price">{ props.price } kr</output>
     </div>
     <p className="btn-space">
-        <button className="btn btn-pjl btn-lg" >
+        <button className="btn btn-pjl btn-lg pull-right" >
             <span className="glyphicon glyphicon-refresh" aria-hidden="true"></span>
-            &nbsp;Räkna ut förbrukningen
+            &nbsp;Beräkna
         </button>
     </p>
   </form>

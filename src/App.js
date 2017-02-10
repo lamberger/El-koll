@@ -6,14 +6,15 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      price:'', 
-      effect: '', 
-      numberOfHours:'', 
-      consumption: '0', 
-      pricePerDay: '0',
-      pricePerWeek: '0',
-      pricePerMonth: '0',
-      pricePerYear: '0'
+      price: 0, 
+      effect: 0, 
+      numberOfHours: 0, 
+      consumption: 0, 
+      pricePerDay: 0,
+      pricePerWeek: 0,
+      pricePerMonth: 0,
+      pricePerYear: 0,
+      valor:''
     }
     this.handlePriceChange = this.handlePriceChange.bind(this);
     this.handleHourChange = this.handleHourChange.bind(this);
@@ -37,22 +38,27 @@ class App extends Component {
   }
 
   calc(w, h, p){
-    let kwh = ((w * h) / 1000).toFixed(2);
-    let dayPrice = (p * kwh).toFixed(2);
-    let weekPrice = (dayPrice * 7).toFixed(2);
-    let monthPrice = (dayPrice * 30.416).toFixed(2);
-    let yearPrice = (dayPrice * 365).toFixed(2);
+    console.log('W ' +w);
+    console.log('H ' +h);
+    console.log('P ' + p);
 
-    this.setState({ 
-      consumption: kwh + ' kWh', 
+    let kwh = ((w * h) / 1000);
+    let dayPrice = (p * kwh);
+    let weekPrice = (dayPrice * 7);
+    let monthPrice = (dayPrice * 30.416);
+    let yearPrice = (dayPrice * 365);
+
+    this.setState({
+      consumption: kwh + ' kWh',
       pricePerDay: dayPrice + ' kr',
       pricePerWeek: weekPrice + ' kr',
       pricePerMonth: monthPrice + ' kr',
-      pricePerYear: yearPrice + ' kr'  
-    })
+      pricePerYear: yearPrice + ' kr'
+    });
   }
 
   render() {
+    
     return (
       <div className="container">
         <div className="row">
@@ -62,6 +68,7 @@ class App extends Component {
           </div>
         </div>
         <div className="col-md-6">
+        
           <ElInfoForm 
             handleSubmit={ this.handleSubmit }
             handlePriceChange={ this.handlePriceChange }
@@ -76,7 +83,7 @@ class App extends Component {
             <div className="panel-heading"><h4>Din produkts elförbrukning kostar</h4></div>
               <div className="panel-body">
                 <p>Förbrukning: { this.state.consumption }</p>
-                <p>Pris/dygn: { this.state.pricePerDay }</p>
+                <p>Pris/dygn: { this.state.pricePerDay } {this.state.valor}</p>
                 <p>Pris/vecka: { this.state.pricePerWeek }</p>
                 <p>Pris/månad: { this.state.pricePerMonth }</p>
                 <p>Pris/år: { this.state.pricePerYear }</p>
