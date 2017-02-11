@@ -7,11 +7,11 @@ p{
     
 }
 .btn-space {
-    margin: 1em 0 1em 0;
+    padding: 2.2em 0 1.2em 0;
 }
 .btn-pjl {
     background-color: lightyellow;
-    border: 1px solid #cccccc;
+    border: 1px solid saddlebrown;
     color: saddlebrown;
 }
 .btn-pjl:hover{
@@ -135,3 +135,18 @@ output:after {
   margin-left: -5px;
   margin-top: 0px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  input[type=range] {
+        width: 720px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    input[type=range] {
+        width: 332px;
+    }
+}
+
+
+

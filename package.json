@@ -1,7 +1,8 @@
 {
   "name": "El-koll",
   "version": "0.1.0",
-  "//": "homepage: http://mywebsite.com/relativepath",
+  "//": "Relativepath to application if not in root",
+  "homepage": "http://patriklamberger.se/elpris",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.8.5"

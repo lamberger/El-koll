@@ -5,7 +5,7 @@ export const ElInfoForm = (props) => (
   
   <form onSubmit={ props.handleSubmit }>
     <div className="input-group">
-        <span className="input-group-addon">Watt&nbsp;
+        <span className="input-group-addon">
             <span className="glyphicon glyphicon-lamp" aria-hidden="true"></span>
         </span>
         <input
@@ -15,10 +15,10 @@ export const ElInfoForm = (props) => (
             type="number"
             min="0"
             step="0.1"
-            max="5000"
+            max="6000"
             value={props.effect}
             onChange={props.handleEffectChange} />
-            <output htmlFor="effect">{ props.effect } watt</output>
+            <span className="input-group-addon">Watt</span>
     </div>
     <p><br /><br /></p>
     <div className="input-group">
@@ -44,7 +44,7 @@ export const ElInfoForm = (props) => (
             onChange={ props.handlePriceChange }/>
             <output htmlFor="price">{ props.price } kr</output>
     </div>
-    <p className="btn-space">
+    <p className="input-group btn-space">
         <button className="btn btn-pjl btn-lg pull-right" >
             <span className="glyphicon glyphicon-refresh" aria-hidden="true"></span>
             &nbsp;Beräkna
