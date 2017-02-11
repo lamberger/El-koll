@@ -65,7 +65,7 @@ class App extends Component {
         </div>
         <div className="col-md-12">
           <div className="alert alert-warning" role="alert">
-            <strong>Elprisberäkning:</strong> Fyll i produktens effekt i fältet. Ställ in hur många timmar produkten används per dygn och viket pris du betalar per kilowattimmar. Tryck på beräkna.
+            <strong>Beräkning:</strong> Fyll i produktens effekt i fältet. Ställ in hur många timmar produkten används per dygn och viket kilowattpris du betalar. Tryck på beräkna.
           </div>
         </div>
         <div className="col-md-6">
@@ -93,7 +93,8 @@ class App extends Component {
         </div>
         <div className="col-md-12">
           <div className="alert alert-warning" role="alert">
-            <strong>Applikationen</strong> är kodat i <a href="https://facebook.github.io/react/" target="_blank">React JS</a> & <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>   
+            <strong>Projektet</strong> är kodat i <a href="https://facebook.github.io/react/" target="_blank">React JS</a> och <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> 
+            <span className="pull-right"><i>-Patrik Lamberger</i></span>  
           </div>
         </div>
         </div>
